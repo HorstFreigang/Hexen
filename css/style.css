@@ -1,0 +1,157 @@
+/* line 3, ../scss/style.scss */
+html, body {
+  margin: 0;
+}
+
+/* line 7, ../scss/style.scss */
+.filter {
+  margin-bottom: 30px;
+}
+
+/* line 11, ../scss/style.scss */
+fieldset {
+  margin-bottom: 30px;
+  border: solid 1px #000;
+}
+
+/* line 16, ../scss/style.scss */
+.honeycombs {
+  counter-reset: section;
+  transition: all 500ms;
+  position: relative;
+  width: 700px;
+  margin-bottom: 30px;
+  background-color: #cfc;
+}
+@media only screen and (max-width: 700px) {
+  /* line 16, ../scss/style.scss */
+  .honeycombs {
+    width: 100%;
+  }
+}
+
+/* line 29, ../scss/style.scss */
+.hex {
+  transition: all 500ms;
+  width: 100px;
+  height: 87px;
+  cursor: pointer;
+}
+/* line 36, ../scss/style.scss */
+.hex:before {
+  counter-increment: section;
+  content: counter(section);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  transform: translate(-50%);
+  color: #fff;
+  line-height: 0;
+}
+/* line 49, ../scss/style.scss */
+.hex:hover img {
+  opacity: 1;
+}
+/* line 54, ../scss/style.scss */
+.hex.disabled {
+  opacity: 0;
+  visibility: hidden;
+}
+/* line 60, ../scss/style.scss */
+.hex.yellow:before {
+  color: #000;
+}
+/* line 65, ../scss/style.scss */
+.hex.hex-30 {
+  width: 100px;
+  height: 115px;
+}
+/* line 70, ../scss/style.scss */
+.hex.hex-30.numbers:before {
+  counter-increment: section;
+  content: counter(section);
+}
+/* line 77, ../scss/style.scss */
+.hex.hex-30.letters:before {
+  content: 'asdf';
+}
+/* line 83, ../scss/style.scss */
+.hex img {
+  opacity: .7;
+}
+
+/* line 141, ../scss/style.scss */
+.cell-inner {
+  transition: all 500ms;
+  opacity: .75;
+}
+/* line 145, ../scss/style.scss */
+.cell-inner:hover {
+  transition: opacity 0s;
+  opacity: 1;
+}
+
+/* line 151, ../scss/style.scss */
+.cell-h {
+  overflow: hidden;
+  width: 100px;
+  height: 87px;
+  transform: rotate(60deg);
+}
+/* line 114, ../scss/style.scss */
+.cell-h .cell-middle {
+  overflow: hidden;
+  width: 100px;
+  height: 87px;
+  transform: rotate(-120deg);
+}
+/* line 121, ../scss/style.scss */
+.cell-h .cell-inner {
+  overflow: hidden;
+  width: 100px;
+  height: 87px;
+  background-color: #404040;
+  transform: rotate(60deg);
+  cursor: pointer;
+}
+/* line 130, ../scss/style.scss */
+.cell-h img {
+  position: relative;
+  top: 50%;
+  transform: translatey(-50%);
+}
+
+/* line 155, ../scss/style.scss */
+.cell-v {
+  overflow: hidden;
+  width: 100px;
+  height: 114.9px;
+  transform: rotate(0deg);
+}
+/* line 114, ../scss/style.scss */
+.cell-v .cell-middle {
+  overflow: hidden;
+  width: 100px;
+  height: 114.9px;
+  transform: rotate(-60deg);
+}
+/* line 121, ../scss/style.scss */
+.cell-v .cell-inner {
+  overflow: hidden;
+  width: 100px;
+  height: 114.9px;
+  background-color: #404040;
+  transform: rotate(120deg);
+  cursor: pointer;
+}
+/* line 130, ../scss/style.scss */
+.cell-v img {
+  position: relative;
+  top: 50%;
+  transform: translatey(-50%) rotate(-60deg);
+}
+/* line 158, ../scss/style.scss */
+.cell-v img {
+  display: none;
+}

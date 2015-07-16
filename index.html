@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Hex Grid</title>
+		<meta charset="utf-8" />
+		<link href="css/style.css" rel="stylesheet" />
+		<script src="jquery-1.11.1.min.js"></script>
+		<script src="src/jquery-hexen.0.1.0.js"></script>
+	</head>
+
+	<body>
+
+		<div class="cell cell-outer cell-h">
+			<div class="cell-middle">
+				<div class="cell-inner">
+					<img src="img/Koala.jpg" alt="" />
+				</div>
+			</div>
+		</div>
+
+		<fieldset>
+			<legend>Raster mit CSS-Hexagons</legend>
+			<div id="css-hex-h" class="honeycombs">
+				<div class="cell cell-outer cell-h"><div class="cell-middle"><div class="cell-inner"><img src="img/Koala.jpg" alt="" /></div></div></div>
+				<div class="cell cell-outer cell-h"><div class="cell-middle"><div class="cell-inner"><img src="img/Koala.jpg" alt="" /></div></div></div>
+				<div class="cell cell-outer cell-h"><div class="cell-middle"><div class="cell-inner"><img src="img/Koala.jpg" alt="" /></div></div></div>
+				<div class="cell cell-outer cell-h"><div class="cell-middle"><div class="cell-inner"><img src="img/Koala.jpg" alt="" /></div></div></div>
+				<div class="cell cell-outer cell-h"><div class="cell-middle"><div class="cell-inner"><img src="img/Koala.jpg" alt="" /></div></div></div>
+				<div class="cell cell-outer cell-h"><div class="cell-middle"><div class="cell-inner"><img src="img/Koala.jpg" alt="" /></div></div></div>
+				<div class="cell cell-outer cell-h"><div class="cell-middle"><div class="cell-inner"><img src="img/Koala.jpg" alt="" /></div></div></div>
+				<div class="cell cell-outer cell-h"><div class="cell-middle"><div class="cell-inner"><img src="img/Koala.jpg" alt="" /></div></div></div>
+				<div class="cell cell-outer cell-h"><div class="cell-middle"><div class="cell-inner"><img src="img/Koala.jpg" alt="" /></div></div></div>
+				<div class="cell cell-outer cell-h"><div class="cell-middle"><div class="cell-inner"><img src="img/Koala.jpg" alt="" /></div></div></div>
+				<div class="cell cell-outer cell-h"><div class="cell-middle"><div class="cell-inner"><img src="img/Koala.jpg" alt="" /></div></div></div>
+				<div class="cell cell-outer cell-h"><div class="cell-middle"><div class="cell-inner"><img src="img/Koala.jpg" alt="" /></div></div></div>
+				<div class="cell cell-outer cell-h"><div class="cell-middle"><div class="cell-inner"><img src="img/Koala.jpg" alt="" /></div></div></div>
+				<div class="cell cell-outer cell-h"><div class="cell-middle"><div class="cell-inner"><img src="img/Koala.jpg" alt="" /></div></div></div>
+			</div>
+		</fieldset>
+
+		<div class="cell cell-outer cell-v">
+			<div class="cell-middle">
+				<div class="cell-inner">
+					<img src="img/Koala.jpg" alt="" />
+				</div>
+			</div>
+		</div>
+
+		<fieldset>
+			<legend>Raster mit CSS-Hexagons</legend>
+			<div id="css-hex-v" class="honeycombs">
+				<div class="cell cell-outer cell-v"><div class="cell-middle"><div class="cell-inner"><img src="img/Koala.jpg" alt="" /></div></div></div>
+				<div class="cell cell-outer cell-v"><div class="cell-middle"><div class="cell-inner"><img src="img/Koala.jpg" alt="" /></div></div></div>
+				<div class="cell cell-outer cell-v"><div class="cell-middle"><div class="cell-inner"><img src="img/Koala.jpg" alt="" /></div></div></div>
+				<div class="cell cell-outer cell-v"><div class="cell-middle"><div class="cell-inner"><img src="img/Koala.jpg" alt="" /></div></div></div>
+				<div class="cell cell-outer cell-v"><div class="cell-middle"><div class="cell-inner"><img src="img/Koala.jpg" alt="" /></div></div></div>
+				<div class="cell cell-outer cell-v"><div class="cell-middle"><div class="cell-inner"><img src="img/Koala.jpg" alt="" /></div></div></div>
+				<div class="cell cell-outer cell-v"><div class="cell-middle"><div class="cell-inner"><img src="img/Koala.jpg" alt="" /></div></div></div>
+				<div class="cell cell-outer cell-v"><div class="cell-middle"><div class="cell-inner"><img src="img/Koala.jpg" alt="" /></div></div></div>
+				<div class="cell cell-outer cell-v"><div class="cell-middle"><div class="cell-inner"><img src="img/Koala.jpg" alt="" /></div></div></div>
+				<div class="cell cell-outer cell-v"><div class="cell-middle"><div class="cell-inner"><img src="img/Koala.jpg" alt="" /></div></div></div>
+				<div class="cell cell-outer cell-v"><div class="cell-middle"><div class="cell-inner"><img src="img/Koala.jpg" alt="" /></div></div></div>
+				<div class="cell cell-outer cell-v"><div class="cell-middle"><div class="cell-inner"><img src="img/Koala.jpg" alt="" /></div></div></div>
+				<div class="cell cell-outer cell-v"><div class="cell-middle"><div class="cell-inner"><img src="img/Koala.jpg" alt="" /></div></div></div>
+				<div class="cell cell-outer cell-v"><div class="cell-middle"><div class="cell-inner"><img src="img/Koala.jpg" alt="" /></div></div></div>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>Raster 1</legend>
+			<div id="default-filter" class="filter" data-target="#hc-default">
+				<button class="button" data-filter="reset">Zurücksetzen</button>
+				<button class="button" data-filter="black">Schwarz</button>
+				<button class="button" data-filter="red">Rot</button>
+				<button class="button" data-filter="green">Grün</button>
+				<button class="button" data-filter="yellow">Gelb</button>
+			</div>
+			<div id="hc-default" class="honeycombs">
+				<div class="hex black"><img src="img/hex-black.png" alt="" /></div>
+				<div class="hex red"><img src="img/hex-red.png" alt="" /></div>
+				<div class="hex green"><img src="img/hex-green.png" alt="" /></div>
+				<div class="hex yellow"><img src="img/hex-yellow.png" alt="" /></div>
+				<div class="hex green"><img src="img/hex-green.png" alt="" /></div>
+				<div class="hex red"><img src="img/hex-red.png" alt="" /></div>
+				<div class="hex yellow"><img src="img/hex-yellow.png" alt="" /></div>
+				<div class="hex green"><img src="img/hex-green.png" alt="" /></div>
+				<div class="hex green"><img src="img/hex-green.png" alt="" /></div>
+				<div class="hex yellow"><img src="img/hex-yellow.png" alt="" /></div>
+				<div class="hex red"><img src="img/hex-red.png" alt="" /></div>
+				<div class="hex black"><img src="img/hex-black.png" alt="" /></div>
+				<div class="hex yellow"><img src="img/hex-yellow.png" alt="" /></div>
+				<div class="hex red"><img src="img/hex-red.png" alt="" /></div>
+				<div class="hex black"><img src="img/hex-black.png" alt="" /></div>
+				<div class="hex black"><img src="img/hex-black.png" alt="" /></div>
+				<div class="hex green"><img src="img/hex-green.png" alt="" /></div>
+				<div class="hex red"><img src="img/hex-red.png" alt="" /></div>
+				<div class="hex black"><img src="img/hex-black.png" alt="" /></div>
+				<div class="hex black"><img src="img/hex-black.png" alt="" /></div>
+				<div class="hex green"><img src="img/hex-green.png" alt="" /></div>
+				<div class="hex black"><img src="img/hex-black.png" alt="" /></div>
+				<div class="hex yellow"><img src="img/hex-yellow.png" alt="" /></div>
+				<div class="hex red"><img src="img/hex-red.png" alt="" /></div>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>Raster 2</legend>
+			<div id="default90-filter" class="filter" data-target="#hc-default90">
+				<button class="button" data-filter="reset">Zurücksetzen</button>
+				<button class="button" data-filter="numbers">Zahlen</button>
+				<button class="button" data-filter="letters">Buchstaben</button>
+			</div>
+			<div id="hc-default90" class="honeycombs">
+				<div class="hex hex-30 numbers"><img src="img/hex-30.png" alt="" /></div>
+				<div class="hex hex-30 letters"><img src="img/hex-30.png" alt="" /></div>
+				<div class="hex hex-30 numbers"><img src="img/hex-30.png" alt="" /></div>
+				<div class="hex hex-30 letters"><img src="img/hex-30.png" alt="" /></div>
+				<div class="hex hex-30 numbers"><img src="img/hex-30.png" alt="" /></div>
+				<div class="hex hex-30 numbers"><img src="img/hex-30.png" alt="" /></div>
+				<div class="hex hex-30 letters"><img src="img/hex-30.png" alt="" /></div>
+				<div class="hex hex-30 letters"><img src="img/hex-30.png" alt="" /></div>
+				<div class="hex hex-30 numbers"><img src="img/hex-30.png" alt="" /></div>
+				<div class="hex hex-30 letters"><img src="img/hex-30.png" alt="" /></div>
+				<div class="hex hex-30 numbers"><img src="img/hex-30.png" alt="" /></div>
+				<div class="hex hex-30 letters"><img src="img/hex-30.png" alt="" /></div>
+				<div class="hex hex-30 letters"><img src="img/hex-30.png" alt="" /></div>
+				<div class="hex hex-30 letters"><img src="img/hex-30.png" alt="" /></div>
+			</div>
+		</fieldset>
+
+		<script>
+			$(function() {
+				$('#css-hex-h').hexen({
+					spacing: 4,
+					cell: '.cell'
+				});
+
+				$('#css-hex-v').hexen({
+					cellOrientation: 'vertical',
+					spacing: 2,
+					cell: '.cell'
+				});
+
+				var grid_1 = $('#hc-default').hexen({
+					filter: '#default-filter'
+				});
+
+				var grid_2 = $('#hc-default90').hexen({
+					cellOrientation: 'vertical',
+					filter: '#default90-filter',
+					spacing: 3
+				});
+			});
+		</script>
+	</body>
+</html>

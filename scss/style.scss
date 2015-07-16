@@ -1,0 +1,161 @@
+$dura: 500ms;
+
+html, body {
+	margin: 0;
+}
+
+.filter {
+	margin-bottom: 30px;
+}
+
+fieldset {
+	margin-bottom: 30px;
+	border: solid 1px #000;
+}
+
+.honeycombs {
+	counter-reset: section;
+	transition: all $dura;
+	position: relative;
+	width: 700px;
+	margin-bottom: 30px;
+	background-color: #cfc;
+
+	@media only screen and (max-width: 700px) {
+		width: 100%;
+	}
+}
+
+.hex {
+	$width: 100px;
+	transition: all $dura;
+	width: $width;
+	height: $width * .87;
+	cursor: pointer;
+
+	&:before {
+		counter-increment: section;
+		content: counter(section);
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		z-index: 1;
+		transform: translate(-50%);
+		color: #fff;
+		line-height: 0;
+	}
+
+	&:hover {
+		img {
+			opacity: 1;
+		}
+	}
+
+	&.disabled {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	&.yellow {
+		&:before {
+			color: #000;
+		}
+	}
+
+	&.hex-30 {
+		width: 100px;
+		height: 115px;
+
+		&.numbers {
+			&:before {
+				counter-increment: section;
+				content: counter(section);
+			}
+		}
+
+		&.letters {
+			&:before {
+				content: 'asdf';
+			}
+		}
+	}
+
+	img {
+		opacity: .7;
+	}
+}
+
+
+@mixin hex($width, $name_space, $orientation: horizontal) {
+	// Variables initialization
+	$rot_outer: 60;
+	$rot_middle: -120;
+	$rot_inner: 60;
+	$w: 0;
+	$h: 0;
+
+	@if $orientation == horizontal {
+		$w: $width;
+		$h: $width * .87;
+	} @else if $orientation == vertical {
+		$w: $width;
+		$h: $width * 1.149;
+		$rot_outer: 0;
+		$rot_middle: -60;
+		$rot_inner: 120;
+	}
+
+	// Styles
+	overflow: hidden;
+	width: $w;
+	height: $h;
+	transform: rotate(#{$rot_outer}deg);
+
+	.#{$name_space}-middle {
+		overflow: hidden;
+		width: $w;
+		height: $h;
+		transform: rotate(#{$rot_middle}deg);
+	}
+
+	.#{$name_space}-inner {
+		overflow: hidden;
+		width: $w;
+		height: $h;
+		background-color: lighten(#000, 25);
+		transform: rotate(#{$rot_inner}deg);
+		cursor: pointer;
+	}
+
+	img {
+		position: relative;
+		top: 50%;
+		@if $orientation == horizontal {
+			transform: translatey(-50%);
+		} @else if $orientation == vertical {
+			transform: translatey(-50%) rotate(-60deg);
+		}
+	}
+}
+
+.cell-inner {
+	transition: all $dura;
+	opacity: .75;
+
+	&:hover {
+		transition: opacity 0s;
+		opacity: 1;
+	}
+}
+
+.cell-h {
+	@include hex(100px, cell);
+}
+
+.cell-v {
+	@include hex(100px, cell, vertical);
+
+	img {
+		display: none;
+	}
+}
