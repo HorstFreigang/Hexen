@@ -104,33 +104,40 @@ pre {
 .hex img {
   opacity: .7;
 }
+/* line 110, ../scss/style.scss */
+.hex svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
 
-/* line 164, ../scss/style.scss */
+/* line 171, ../scss/style.scss */
 .cell-inner {
   transition: all 500ms;
   opacity: .75;
 }
-/* line 168, ../scss/style.scss */
+/* line 175, ../scss/style.scss */
 .cell-inner:hover {
   transition: opacity 0s;
   opacity: 1;
 }
 
-/* line 174, ../scss/style.scss */
+/* line 181, ../scss/style.scss */
 .cell-h {
   overflow: hidden;
   width: 100px;
   height: 87px;
   transform: rotate(60deg);
 }
-/* line 137, ../scss/style.scss */
+/* line 144, ../scss/style.scss */
 .cell-h .cell-middle {
   overflow: hidden;
   width: 100px;
   height: 87px;
   transform: rotate(-120deg);
 }
-/* line 144, ../scss/style.scss */
+/* line 151, ../scss/style.scss */
 .cell-h .cell-inner {
   overflow: hidden;
   width: 100px;
@@ -139,28 +146,28 @@ pre {
   transform: rotate(60deg);
   cursor: pointer;
 }
-/* line 153, ../scss/style.scss */
+/* line 160, ../scss/style.scss */
 .cell-h img {
   position: relative;
   top: 50%;
   transform: translatey(-50%);
 }
 
-/* line 178, ../scss/style.scss */
+/* line 185, ../scss/style.scss */
 .cell-v {
   overflow: hidden;
   width: 100px;
   height: 114.9px;
   transform: rotate(0deg);
 }
-/* line 137, ../scss/style.scss */
+/* line 144, ../scss/style.scss */
 .cell-v .cell-middle {
   overflow: hidden;
   width: 100px;
   height: 114.9px;
   transform: rotate(-60deg);
 }
-/* line 144, ../scss/style.scss */
+/* line 151, ../scss/style.scss */
 .cell-v .cell-inner {
   overflow: hidden;
   width: 100px;
@@ -169,13 +176,13 @@ pre {
   transform: rotate(120deg);
   cursor: pointer;
 }
-/* line 153, ../scss/style.scss */
+/* line 160, ../scss/style.scss */
 .cell-v img {
   position: relative;
   top: 50%;
   transform: translatey(-50%) rotate(-60deg);
 }
-/* line 181, ../scss/style.scss */
+/* line 188, ../scss/style.scss */
 .cell-v img {
   display: none;
 }

@@ -135,6 +135,17 @@
 			});
 		};
 
+		// add svg for "z-indexing"
+		/*var addSvg = function(w, h) {
+			var coords = 'm ' + 0 + ' ' + (h / 2) + ' l ' + (w * .25) + ' ' + (h / 2 * -1) + ' l '+ (w / 2) + ' 0 l '+ (w * .25) + ' ' + (h / 2) + ' l '+ (w * .25 * -1) + ' ' + (h / 2) + ' l ' + (w / 2 * -1) + ' 0 z';
+			var svg = '' +
+				'<svg style="position: absolute; top: 0; left: 0;" width="'+w+'" height="'+h+'">' +
+				'<path d="'+coords+'" fill="none"></path>' +
+				'</svg>';
+
+			return svg;
+		};*/
+
 		// init resize function
 		var resize = function() {
 			var reposition = debounce(function() {
