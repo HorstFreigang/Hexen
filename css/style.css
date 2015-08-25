@@ -112,10 +112,12 @@ pre {
   z-index: 10;
 }
 
-/* line 171, ../scss/style.scss */
+/* line 169, ../scss/style.scss */
 .cell-inner {
   transition: all 500ms;
   opacity: .75;
+  background-color: #404040;
+  cursor: pointer;
 }
 /* line 175, ../scss/style.scss */
 .cell-inner:hover {
@@ -142,11 +144,9 @@ pre {
   overflow: hidden;
   width: 100px;
   height: 87px;
-  background-color: #404040;
   transform: rotate(60deg);
-  cursor: pointer;
 }
-/* line 160, ../scss/style.scss */
+/* line 158, ../scss/style.scss */
 .cell-h img {
   position: relative;
   top: 50%;
@@ -172,11 +172,9 @@ pre {
   overflow: hidden;
   width: 100px;
   height: 114.9px;
-  background-color: #404040;
   transform: rotate(120deg);
-  cursor: pointer;
 }
-/* line 160, ../scss/style.scss */
+/* line 158, ../scss/style.scss */
 .cell-v img {
   position: relative;
   top: 50%;

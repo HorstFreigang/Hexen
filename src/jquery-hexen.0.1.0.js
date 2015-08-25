@@ -171,8 +171,6 @@
 			var f = $btn.attr('data-filter');
 			var target = $(options['filter']).attr('data-target');
 
-			console.log(options['filter']);
-
 			if(f == 'reset') {
 				$(target).find(options['cell']).removeClass('disabled');
 			} else {

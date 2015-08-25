@@ -152,9 +152,7 @@ pre {
 		overflow: hidden;
 		width: $w;
 		height: $h;
-		background-color: lighten(#000, 25);
 		transform: rotate(#{$rot_inner}deg);
-		cursor: pointer;
 	}
 
 	img {
@@ -171,6 +169,8 @@ pre {
 .cell-inner {
 	transition: all $dura;
 	opacity: .75;
+	background-color: lighten(#000, 25);
+	cursor: pointer;
 
 	&:hover {
 		transition: opacity 0s;
