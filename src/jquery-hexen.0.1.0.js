@@ -24,6 +24,7 @@
 			cell: '.hex',
 			cellOrientation: 'horizontal',
 			filter: '',
+			filterBtn: '',
 			spacing: 1
 		};
 		var options = $.extend(true, {}, defaultOptions, hexenOptions);
@@ -60,14 +61,15 @@
 			var posLeft = 0;
 			var posTop = 0;
 			var spacing = options['spacing'];
+			var hexenWidth = _hexen.width();
 
 			_hexen.find(options['cell']).each(function() {
 				var hexWidth = $(this).width();
 				var hexHeight = $(this).height();
 
-				if($(this).hasClass('disabled') == false) {
+				if($(this).css('display') != 'none' && $(this).css('visibility') == 'visible') {
 					// positioning of elements
-					if(((col + 1) * hexWidth + (col + 1) * spacing - col * (hexWidth / 4)) > _hexen.width()) {
+					if(((col + 1) * hexWidth + (col + 1) * spacing - col * (hexWidth / 4)) > hexenWidth) {
 						posLeft = 0;
 						col = 0;
 						row++;
@@ -99,14 +101,15 @@
 			var posLeft = 0;
 			var posTop = 0;
 			var spacing = options['spacing'];
+			var hexenWidth = _hexen.width();
 
 			_hexen.find(options['cell']).each(function() {
 				var hexWidth = $(this).width();
 				var hexHeight = $(this).height();
 
-				if($(this).hasClass('disabled') == false) {
+				if($(this).css('display') != 'none' && $(this).css('visibility') == 'visible') {
 					// positioning of elements
-					if(((col + 1) * hexWidth + (col + 1) * spacing + hexWidth / 2) > _hexen.width()) {
+					if(((col + 1) * hexWidth + (col + 1) * spacing + hexWidth / 2) > hexenWidth) {
 						if(row % 2 == 0) {
 							posLeft = hexWidth / 2 + Math.floor(spacing / 2);
 						} else {
@@ -135,17 +138,6 @@
 			});
 		};
 
-		// add svg for "z-indexing"
-		/*var addSvg = function(w, h) {
-			var coords = 'm ' + 0 + ' ' + (h / 2) + ' l ' + (w * .25) + ' ' + (h / 2 * -1) + ' l '+ (w / 2) + ' 0 l '+ (w * .25) + ' ' + (h / 2) + ' l '+ (w * .25 * -1) + ' ' + (h / 2) + ' l ' + (w / 2 * -1) + ' 0 z';
-			var svg = '' +
-				'<svg style="position: absolute; top: 0; left: 0;" width="'+w+'" height="'+h+'">' +
-				'<path d="'+coords+'" fill="none"></path>' +
-				'</svg>';
-
-			return svg;
-		};*/
-
 		// init resize function
 		var resize = function() {
 			var reposition = debounce(function() {
@@ -160,7 +152,7 @@
 			resize();
 
 			if(options['filter'] != '') {
-				$(options['filter']).on('click', 'button', function(e) {
+				$(options['filter']).on('click', options['filterBtn'], function(e) {
 					e.preventDefault();
 					_hexen.filterGrid($(this));
 				});
